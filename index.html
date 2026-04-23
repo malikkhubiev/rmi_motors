@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Предпродажная подготовка авто в Черкесске: химчистка салона, полировка фар, детейлинг и локальное устранение сколов. RMI Motors, улица Лермонтова, 194.">
+    <meta name="keywords" content="предпродажная подготовка Черкесск, подготовка авто к продаже Черкесск, химчистка салона Черкесск, полировка фар Черкесск, детейлинг Черкесск, Карачаево-Черкесия, КЧР">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="RMI Motors">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Предпродажная подготовка авто в Черкесске - RMI Motors">
+    <meta property="og:description" content="Поднимем рыночную цену авто перед продажей: химчистка, полировка, локальный ремонт и детейлинг в Черкесске.">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="RMI Motors">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="apple-mobile-web-app-title" content="RMI Motors" />
+    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
+    <link rel="icon" type="image/png" href="./public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="shortcut icon" href="./public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <title>Предпродажная подготовка Черкесск - RMI Motors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            position: relative;
+            border: 1px solid #000000;
+            background: #ffffff;
+        }
+
+        .corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-style: solid;
+            border-color: #000000;
+        }
+
+        .corner-tl { top: 30px; left: 30px; border-width: 3px 0 0 3px; }
+        .corner-tr { top: 30px; right: 30px; border-width: 3px 3px 0 0; }
+        .corner-bl { bottom: 30px; left: 30px; border-width: 0 0 3px 3px; }
+        .corner-br { bottom: 30px; right: 30px; border-width: 0 3px 3px 0; }
+
+        .content {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Типографика */
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -1.2px;
+            max-width: 1100px;
+            margin: 0 auto 25px auto;
+        }
+
+        .subhead {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+            border-bottom: 1px solid #000;
+            padding-bottom: 40px;
+        }
+
+        /* Блок "Почему мы" – 4 преимущества в стиле сайта */
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px 70px;
+            margin: 30px 0 50px 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        .benefit-card {
+            flex: 1 1 380px;
+            max-width: 480px;
+            border-left: 4px solid #000;
+            padding-left: 25px;
+        }
+
+        .benefit-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .benefit-desc {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .accent-block {
+            background: #f5f5f5;
+            padding: 30px 40px;
+            margin: 30px 0;
+            border-radius: 0;
+            text-align: center;
+            width: 100%;
+            border: 1px solid #000;
+        }
+
+        .price-highlight {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .price-highlight small {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-left: 5px;
+            color: #555;
+        }
+
+        /* Таблица услуг – 4 колонки? делаем блоками */
+        .services-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px 20px;
+            width: 100%;
+            margin: 50px 0 40px;
+            text-align: left;
+        }
+
+        .service-category {
+            border-top: 3px solid #000;
+            padding-top: 20px;
+        }
+
+        .service-category h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: #222;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .service-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-weight: 600;
+        }
+
+        /* Телефонный блок – черный блок с призывом */
+        .cta-black {
+            background: #000;
+            color: #fff;
+            padding: 45px 30px;
+            margin: 40px 0 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-phone {
+            font-size: 5rem;
+            font-weight: 600;
+            letter-spacing: -2px;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0 10px;
+            border-bottom: 3px solid #fff;
+            padding-bottom: 8px;
+        }
+
+        .cta-phone:hover {
+            color: #ccc;
+            border-color: #ccc;
+        }
+
+        .company-name-large {
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: -1px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .cta-label {
+            font-size: 1.3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-note {
+            margin-top: 35px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            width: 100%;
+        }
+
+        .address-block {
+            margin-top: 30px;
+            width: 100%;
+            border: 1px solid #000;
+            padding: 18px 22px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .address-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .address-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .seo-text {
+            margin-top: 30px;
+            width: 100%;
+            text-align: left;
+            color: #1f1f1f;
+            line-height: 1.55;
+            font-size: 1rem;
+        }
+
+        .seo-text p + p {
+            margin-top: 12px;
+        }
+
+        /* Адаптив */
+        @media (max-width: 900px) {
+            h1 { font-size: 2.6rem; }
+            .subhead { font-size: 1.3rem; }
+            .benefit-title { font-size: 1.6rem; }
+            .cta-phone { font-size: 3.5rem; }
+        }
+        @media (max-width: 600px) {
+            .content { padding: 40px 20px; }
+            h1 { font-size: 2.3rem; }
+            .benefit-card { padding-left: 15px; }
+            .cta-phone { font-size: 2rem; }
+            .price-highlight { font-size: 2rem; }
+            .company-name-large { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <div class="content">
+            <!-- Компания и телефон (верх) минималистично -->
+            <div style="gap: 10px; width:100%; flex-direction: column; margin-bottom:15px; display:flex; justify-content:center; align-items: center; font-size:1rem; letter-spacing:2px;">
+                <span style="font-weight:600;">RMI MOTORS</span>
+                <a href="tel:+79283880885" style="text-decoration:none; color:#000; font-weight:600; border-bottom:1.5px solid #000;">+7 928 388-08-85</a>
+            </div>
+
+            <br>
+
+            <!-- H1 заголовок -->
+            <h1>Предпродажная подготовка авто за 1–2 дня</h1>
+
+            <!-- Подзаголовок -->
+            <div class="subhead">
+                Всё в одном месте в Черкесске. Без очередей к мотористам, детейлерам и мойщикам. Вы оставляете машину — мы возвращаем товарный вид и готовим авто к продаже.
+            </div>
+
+            <!-- Блок «Почему мы?» — 4 причины, крупно -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-title">Экономия нервов<br>и времени</div>
+                    <div class="benefit-desc">Забудьте про логистику «мойка-полировка-электрик-химчистка». Весь комплекс работ выполняется в одном боксе за 1-2 дня.</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Оптовая стоимость<br>комплекса</div>
+                    <div class="benefit-desc">Отдельно химчистка салона стоит от 10 000 ₽. У нас комплекс начинается всего от 10 000 ₽ (Мойка + Полировка оптики + Локальное устранение косяков включены в стоимость).</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Убираем <br>«красные флаги»</div>
+                    <div class="benefit-desc">Устраняем именно то, на что покупатель смотрит в первую очередь: мутные фары, сколы, сопли изоленты под капотом, скрипящий салон.</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Фиксированная цена<br>без сюрпризов</div>
+                    <div class="benefit-desc">Называем стоимость заранее по фото или видео. При осмотре цена не вырастет — никаких «ой, тут сложный случай». Платите ровно столько, сколько обговорили.</div>
+                </div>
+            </div>
+
+            <!-- Блок с комплексной ценой (визуальный акцент, черный стиль?) -->
+            <div class="accent-block">
+                <div style="font-size:1.2rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:10px;">комплекс от</div>
+                <div class="price-highlight">10 000 <small>₽</small></div>
+                <div style="margin-top:15px; color:#2a2a2a;">Мойка<br>Полировка оптики<br>Локальное устранение косяков<br>уже включены в стоимость</div>
+            </div>
+
+            <!-- Список услуг — 4 направления (блоки) -->
+            <div class="services-panel">
+                <div class="service-category">
+                    <h3>Оптика и кузов</h3>
+                    <ul class="service-list">
+                        <li>Локальное устранение сколов (без полной перекраски)</li>
+                        <li>Полировка и регулировка фар (убираем «катаракту» и мутность)</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Детейлинг и уборка</h3>
+                    <ul class="service-list">
+                        <li>Комплексная мойка кузова</li>
+                        <li>Химчистка салона с устранением запахов</li>
+                        <li>Освежение салона и устранение скрипов пластика</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Техническая эстетика</h3>
+                    <ul class="service-list">
+                        <li>Приведение подкапотного пространства в порядок: замена синей изоленты и торчащих проводов на штатную гофру и клипсы</li>
+                        <li>Ревизия патрубков и шлангов (визуальный порядок)</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Мелкий ремонт</h3>
+                    <ul class="service-list">
+                        <li>Протяжка креплений</li>
+                        <li>Локальная подварка (точечно, где это критично для осмотра)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Главное действие — позвонить (черный блок) -->
+            <div class="cta-black">
+                <div class="cta-label">звоните прямо сейчас</div>
+                <a href="tel:+79283880885" class="cta-phone">+7 928 388-08-85</a>
+                <div style="margin-top: 30px;">
+                    <div class="company-name-large">RMI Motors</div>
+                    <div style="font-size:1.2rem; opacity:0.9; letter-spacing:2px;">Предпродажная подготовка · 1–2 дня</div>
+                </div>
+                <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size:1rem; flex-direction: column;">
+                    <span>🔧 полный цикл</span>
+                </div>
+            </div>
+
+            <div class="address-block">
+                <div class="address-title">Адрес</div>
+                <div class="address-value">г. Черкесск, улица Лермонтова, 194</div>
+            </div>
+
+            <!-- Дополнительный призыв: большая кнопка играет роль якоря, но телефон уже основной -->
+            <div style="margin: 25px 0 10px; width:100%; text-align:center;">
+                <a href="tel:+79283880885" style="display:inline-block; background:transparent; border:2.5px solid #000; color:#000; padding:18px 50px; font-size:1.6rem; font-weight:600; text-decoration:none; letter-spacing:2px; transition:0.1s;">ПОЗВОНИТЬ</a>
+                <p style="margin-top:18px; font-size:1rem; color:#444;">Поднимем ценник на 15–20% без капитального ремонта</p>
+            </div>
+
+            <!-- Футер -->
+            <div class="footer-note">
+                RMI Motors · <span id="workStatus">работаем ежедневно</span> · предпродажная подготовка
+                <br><span style="font-size:0.8rem;">© 2026 · +7 928 388-08-85 · Черкесск, ул. Лермонтова, 194</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Простой скрипт для живого статуса (похоже на исходный, но убираем время) 
+    и небольшое обновление состояния -->
+    <script>
+        (function() {
+            const statusEl = document.getElementById('workStatus');
+            if (statusEl) {
+                const now = new Date();
+                const hour = now.getHours();
+                // простой рабочий статус (для красоты)
+                if (hour >= 9 && hour < 21) {
+                    statusEl.textContent = 'открыто · звоните';
+                } else {
+                    statusEl.textContent = 'запись 24/7';
+                }
+            }
+            // Можно добавить плавную прокрутку при клике на телефон? Уже есть.
+            // Дополнительно — динамика подчеркивания компании.
+        })();
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "RMI Motors",
+      "description": "Предпродажная подготовка авто в Черкесске: химчистка салона, полировка фар, детейлинг, локальное устранение сколов.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "улица Лермонтова, 194",
+        "addressLocality": "Черкесск",
+        "addressRegion": "Карачаево-Черкесская Республика",
+        "addressCountry": "RU"
+      },
+      "areaServed": [
+        "Черкесск",
+        "Карачаево-Черкесская Республика",
+        "Усть-Джегута",
+        "Хабез",
+        "Псыж"
+      ],
+      "telephone": "+7-928-388-08-85",
+      "priceRange": "₽₽",
+      "openingHours": "Mo-Su 09:00-21:00",
+      "serviceType": [
+        "Предпродажная подготовка",
+        "Подготовка авто к продаже",
+        "Химчистка салона",
+        "Полировка фар",
+        "Детейлинг"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько стоит предпродажная подготовка авто в Черкесске?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Комплексная предпродажная подготовка в RMI Motors начинается от 10 000 рублей и зависит от состояния автомобиля."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "За сколько времени можно подготовить машину к продаже?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Большинство работ мы выполняем за 1-2 дня, чтобы вы могли быстрее выставить автомобиль на продажу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работаете только по Черкесску?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет, к нам приезжают клиенты из всей КЧР: Усть-Джегута, Хабез, Псыж и других населенных пунктов."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- Примечание: дизайн полностью соблюдает дух исходного: углы, черный/белый контраст, 
+         крупная типографика, черный блок с телефоном как ключевое действие. 
+         Сохранены фирменные рамки и отступы -->
+</body>
+</html>
