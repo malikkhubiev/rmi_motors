@@ -79,13 +79,17 @@
         }
 
         .subhead {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
             font-size: 1.5rem;
             font-weight: 400;
             line-height: 1.4;
             color: #333;
             max-width: 900px;
-            margin: 0 auto 50px auto;
-            border-bottom: 1px solid #000;
+            margin: 0 auto 25px auto;
             padding-bottom: 40px;
         }
 
@@ -313,36 +317,10 @@
             <!-- Подзаголовок -->
             <div class="subhead">
                 Всё в одном месте в Черкесске. Без очередей к мотористам, детейлерам и мойщикам. Вы оставляете машину — мы возвращаем товарный вид и готовим авто к продаже.
+                <a href="tel:+79283880885" style="display:inline-block; background:transparent; border:2.5px solid #000; color:#000; padding:18px 50px; font-size:1.6rem; font-weight:600; text-decoration:none; letter-spacing:2px; transition:0.1s;">ПОЗВОНИТЬ</a>
             </div>
 
-            <!-- Блок «Почему мы?» — 4 причины, крупно -->
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-title">Экономия нервов<br>и времени</div>
-                    <div class="benefit-desc">Забудьте про логистику «мойка-полировка-электрик-химчистка». Весь комплекс работ выполняется в одном боксе за 1-2 дня.</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-title">Оптовая стоимость<br>комплекса</div>
-                    <div class="benefit-desc">Отдельно химчистка салона стоит от 10 000 ₽. У нас комплекс начинается всего от 10 000 ₽ (Мойка + Полировка оптики + Локальное устранение косяков включены в стоимость).</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-title">Убираем <br>«красные флаги»</div>
-                    <div class="benefit-desc">Устраняем именно то, на что покупатель смотрит в первую очередь: мутные фары, сколы, сопли изоленты под капотом, скрипящий салон.</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-title">Фиксированная цена<br>без сюрпризов</div>
-                    <div class="benefit-desc">Называем стоимость заранее по фото или видео. При осмотре цена не вырастет — никаких «ой, тут сложный случай». Платите ровно столько, сколько обговорили.</div>
-                </div>
-            </div>
-
-            <!-- Блок с комплексной ценой (визуальный акцент, черный стиль?) -->
-            <div class="accent-block">
-                <div style="font-size:1.2rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:10px;">комплекс от</div>
-                <div class="price-highlight">10 000 <small>₽</small></div>
-                <div style="margin-top:15px; color:#2a2a2a;">Мойка<br>Полировка оптики<br>Локальное устранение косяков<br>уже включены в стоимость</div>
-            </div>
-
-            <!-- Список услуг — 4 направления (блоки) -->
+                        <!-- Список услуг — 4 направления (блоки) -->
             <div class="services-panel">
                 <div class="service-category">
                     <h3>Оптика и кузов</h3>
@@ -375,28 +353,44 @@
                 </div>
             </div>
 
+            <!-- Блок с комплексной ценой (белый на чёрном) -->
+            <div style="background: #000; color: #fff; padding: 50px 40px; margin: 30px 0; text-align: center; width: 100%;">
+                <div style="font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 20px; color: rgba(255,255,255,0.7);">комплекс от</div>
+                <div style="font-size: 4rem; font-weight: 700; line-height: 1; letter-spacing: -3px; margin-bottom: 25px;">10 000 <span style="font-size: 2rem; font-weight: 300; color: rgba(255,255,255,0.6);">₽</span></div>
+                <div style="font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.85);">
+                    Мойка кузова | Полировка оптики | Локальное устранение косяков<br>
+                    <span style="font-weight: 600; color: #fff; margin-top: 8px; display: inline-block;">уже включены в стоимость</span>
+                </div>
+            </div>
+
+            <!-- Блок «Почему мы?» — 4 причины, крупно -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-title">Экономия нервов<br>и времени</div>
+                    <div class="benefit-desc">Забудьте про логистику «мойка-полировка-электрик-химчистка». Весь комплекс работ выполняется в одном боксе за 1-2 дня.</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Оптовая стоимость<br>комплекса</div>
+                    <div class="benefit-desc">Отдельно химчистка салона стоит от 10 000 ₽. У нас комплекс начинается всего от 10 000 ₽ (Мойка + Полировка оптики + Локальное устранение косяков включены в стоимость).</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Убираем <br>«красные флаги»</div>
+                    <div class="benefit-desc">Устраняем именно то, на что покупатель смотрит в первую очередь: мутные фары, сколы, сопли изоленты под капотом, скрипящий салон.</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-title">Фиксированная цена<br>без сюрпризов</div>
+                    <div class="benefit-desc">Называем стоимость заранее по фото или видео. При осмотре цена не вырастет — никаких «ой, тут сложный случай». Платите ровно столько, сколько обговорили.</div>
+                </div>
+            </div>
+
             <!-- Главное действие — позвонить (черный блок) -->
             <div class="cta-black">
+                <div class="company-name-large">RMI Motors</div>
                 <div class="cta-label">звоните прямо сейчас</div>
                 <a href="tel:+79283880885" class="cta-phone">+7 928 388-08-85</a>
                 <div style="margin-top: 30px;">
-                    <div class="company-name-large">RMI Motors</div>
-                    <div style="font-size:1.2rem; opacity:0.9; letter-spacing:2px;">Предпродажная подготовка · 1–2 дня</div>
+                    <div class="address-value">Адрес: г. Черкесск, улица Лермонтова, 194</div>
                 </div>
-                <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size:1rem; flex-direction: column;">
-                    <span>🔧 полный цикл</span>
-                </div>
-            </div>
-
-            <div class="address-block">
-                <div class="address-title">Адрес</div>
-                <div class="address-value">г. Черкесск, улица Лермонтова, 194</div>
-            </div>
-
-            <!-- Дополнительный призыв: большая кнопка играет роль якоря, но телефон уже основной -->
-            <div style="margin: 25px 0 10px; width:100%; text-align:center;">
-                <a href="tel:+79283880885" style="display:inline-block; background:transparent; border:2.5px solid #000; color:#000; padding:18px 50px; font-size:1.6rem; font-weight:600; text-decoration:none; letter-spacing:2px; transition:0.1s;">ПОЗВОНИТЬ</a>
-                <p style="margin-top:18px; font-size:1rem; color:#444;">Поднимем ценник на 15–20% без капитального ремонта</p>
             </div>
 
             <!-- Футер -->
