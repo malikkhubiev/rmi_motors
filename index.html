@@ -22,10 +22,25 @@
     <link rel="manifest" href="./site.webmanifest" />
     <title>Предпродажная подготовка Черкесск - RMI Motors</title>
     <style>
+        @font-face {
+            font-family: 'TikTokSans';
+            src: url('./fonts/TikTokSans-VF-v4-RC.otf') format('truetype');
+            font-weight: 300 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Widock';
+            src: url('./fonts/Widock.otf') format('truetype');
+            font-weight: 300 700;
+            font-style: normal;
+            font-display: swap;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: TikTokSans;
         }
 
         body {
@@ -70,6 +85,7 @@
 
         /* Типографика */
         h1 {
+            font-family: Widock;
             font-size: 3.2rem;
             font-weight: 600;
             line-height: 1.15;
@@ -288,11 +304,166 @@
         }
         @media (max-width: 600px) {
             .content { padding: 40px 20px; }
-            h1 { font-size: 2.3rem; }
+            h1 { font-size: 1.5rem; }
             .benefit-card { padding-left: 15px; }
             .cta-phone { font-size: 2rem; }
             .price-highlight { font-size: 2rem; }
             .company-name-large { font-size: 2rem; }
+        }
+        /* ========== PREMIUM CTA BUTTON ========== */
+        .premium-cta {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: #fff;
+            border: 2px solid #000;
+            padding: 22px 48px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-family: inherit;
+            cursor: pointer;
+            overflow: hidden;
+            isolation: isolate;
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Фоновый слой для эффекта перелива */
+        .premium-cta__bg {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            z-index: 0;
+            transition: background 0.6s ease;
+        }
+
+        /* Содержимое кнопки */
+        .premium-cta__content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: gap 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Иконка телефона */
+        .premium-cta__icon {
+            display: flex;
+            align-items: center;
+            opacity: 0.85;
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Текст */
+        .premium-cta__text {
+            font-family: Widock;
+            transition: letter-spacing 0.4s ease, color 0.4s ease;
+        }
+
+        /* Стрелка (скрыта по умолчанию) */
+        .premium-cta__arrow {
+            display: flex;
+            align-items: center;
+            opacity: 1;
+            transform: translateX(-10px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Блик */
+        .premium-cta__shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.08) 20%,
+                rgba(255,255,255,0.12) 50%,
+                rgba(255,255,255,0.08) 80%,
+                transparent
+            );
+            z-index: 3;
+            transform: skewX(-25deg);
+            transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            pointer-events: none;
+        }
+
+        /* ========== HOVER ========== */
+        .premium-cta:hover {
+            border-color: #333;
+            padding-right: 44px;
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .premium-cta:hover .premium-cta__bg {
+            background: #111;
+        }
+
+        .premium-cta:hover .premium-cta__content {
+            gap: 18px;
+        }
+
+        .premium-cta:hover .premium-cta__icon {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .premium-cta:hover .premium-cta__text {
+            letter-spacing: 5px;
+        }
+
+        .premium-cta:hover .premium-cta__arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .premium-cta:hover .premium-cta__shine {
+            left: 120%;
+        }
+
+        /* ========== ACTIVE ========== */
+        .premium-cta:active {
+            transform: scale(0.98);
+            transition: transform 0.15s ease;
+        }
+
+        /* ========== Пульсация при загрузке (один раз) ========== */
+        @keyframes premium-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0,0,0,0.3);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(0,0,0,0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            }
+        }
+
+        .premium-cta.pulse-once {
+            animation: premium-pulse 1.5s ease-out 0.8s 1;
+        }
+
+        /* Адаптив */
+        @media (max-width: 600px) {
+            .premium-cta {
+                padding: 17px 32px;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+            .premium-cta:hover {
+                padding-right: 30px;
+            }
+            .premium-cta:hover .premium-cta__text {
+                letter-spacing: 3px;
+            }
         }
     </style>
 </head>
@@ -317,8 +488,20 @@
 
             <!-- Подзаголовок -->
             <div class="subhead">
-                Всё в одном месте в Черкесске. Без очередей к мотористам, детейлерам и мойщикам. Вы оставляете машину — мы возвращаем товарный вид и готовим авто к продаже.
-                <a href="tel:+79283880885" style="display:inline-block; background:transparent; border:2.5px solid #000; color:#000; padding:18px 50px; font-size:1.6rem; font-weight:600; text-decoration:none; letter-spacing:2px; transition:0.1s;">ПОЗВОНИТЬ</a>
+                Всё в одном месте в Черкесске. Без очередей к мотористам, детейлерам и мойщикам.<br>Вы оставляете машину — мы возвращаем товарный вид и готовим авто к продаже.
+                <!-- <a href="tel:+79283880885" style="display:inline-block; background:transparent; border:2.5px solid #000; color:#000; padding:18px 50px; font-size:1.6rem; font-weight:600; text-decoration:none; letter-spacing:2px; transition:0.1s;">ПОЗВОНИТЬ</a> -->
+                <a href="tel:+79283880885" class="premium-cta">
+                    <span class="premium-cta__bg"></span>
+                    <span class="premium-cta__content">
+                        <span class="premium-cta__text">ПОЗВОНИТЬ</span>
+                        <span class="premium-cta__arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="premium-cta__shine"></span>
+                </a>
             </div>
 
                         <!-- Список услуг — 4 направления (блоки) -->
@@ -401,6 +584,33 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.premium-cta');
+            if (!btn) return;
+
+            // Элегантная однократная пульсация при загрузке
+            btn.classList.add('pulse-once');
+
+            // Добавляем звук «премиального» клика (опционально, без звукового файла — просто тактильный эффект)
+            btn.addEventListener('mousedown', function() {
+                this.style.transition = 'transform 0.1s cubic-bezier(0.22, 1, 0.36, 1)';
+            });
+
+            btn.addEventListener('mouseup', function() {
+                this.style.transition = 'transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)';
+            });
+
+            // Мерцание блика при фокусе (без фанатизма, очень сдержанно)
+            btn.addEventListener('mouseenter', function() {
+                const shine = this.querySelector('.premium-cta__shine');
+                if (shine) {
+                    shine.style.transition = 'left 0.7s cubic-bezier(0.22, 1, 0.36, 1)';
+                }
+            });
+        });
+    </script>
 
     <!-- Простой скрипт для живого статуса (похоже на исходный, но убираем время) 
     и небольшое обновление состояния -->
