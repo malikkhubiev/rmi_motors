@@ -41,6 +41,7 @@
             font-family: 'TikTokSans';
             src: url('./fonts/TikTokSans-VF-v4-RC.otf') format('truetype');
             font-weight: 300 700;
+            font-display: swap;
             font-style: normal;
             font-display: swap;
         }
@@ -48,6 +49,7 @@
             font-family: 'Widock';
             src: url('./fonts/Widock.otf') format('truetype');
             font-weight: 300 700;
+            font-display: swap;
             font-style: normal;
             font-display: swap;
         }
@@ -611,7 +613,7 @@
         </div>
     </div>
 
-    <script>
+    <script defer>
         document.addEventListener('DOMContentLoaded', () => {
             const btn = document.querySelector('.premium-cta');
             if (!btn) return;
@@ -640,7 +642,7 @@
 
     <!-- Простой скрипт для живого статуса (похоже на исходный, но убираем время) 
     и небольшое обновление состояния -->
-    <script>
+    <script defer>
         (function() {
             const statusEl = document.getElementById('workStatus');
             if (statusEl) {
@@ -743,8 +745,5 @@
       ]
     }
     </script>
-    <!-- Примечание: дизайн полностью соблюдает дух исходного: углы, черный/белый контраст, 
-         крупная типографика, черный блок с телефоном как ключевое действие. 
-         Сохранены фирменные рамки и отступы -->
 </body>
 </html>
