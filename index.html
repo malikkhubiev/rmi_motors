@@ -144,6 +144,30 @@
             padding-left: 25px;
         }
 
+        .benefit-icon,
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 68px;
+            height: 68px;
+            margin-bottom: 22px;
+            color: #000;
+        }
+
+        .benefit-icon svg,
+        .service-icon svg {
+            width: 68px;
+            height: 68px;
+            display: block;
+            overflow: visible;
+        }
+
+        .benefit-icon svg *,
+        .service-icon svg * {
+            vector-effect: non-scaling-stroke;
+        }
+
         .benefit-title {
             font-size: 1.8rem;
             font-weight: 600;
@@ -192,11 +216,16 @@
         }
 
         .service-category {
-            border-top: 3px solid #000;
-            padding-top: 20px;
+            border-top: 2px solid #000;
+            padding-top: 24px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
         }
 
         .service-category h3 {
+            text-align: center;
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 18px;
@@ -502,7 +531,7 @@
             <br>
 
             <!-- H1 заголовок -->
-            <h1 style="margin-top: 25px;"> За 1–2 дня <br> увеличим стоимость вашего авто <br>для продажи <br><br></h1>
+            <h1 style="margin-top: 25px;"> За 2 дня <br> увеличим стоимость <br> вашего авто для продажи <br><br></h1>
 
             <!-- Подзаголовок -->
             <div class="subhead">
@@ -530,25 +559,52 @@
                 alt="Описание картинки"
             >
 
-            <!-- Список услуг — 4 направления (блоки) -->
+            <!-- Список услуг — 3 направления (блоки) -->
             <div class="services-panel">
                 <div class="service-category">
-                    <h3>Оптика и кузов: полировка фар и удаление сколов</h3>
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 36L14 24C17 19 23 16 31 16H43L56 27V39H7V36Z"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 35L23 25H42L51 35H17Z"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <path d="M31 7V12M44 11L41 16M53 20L48 22"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                            <path d="M10 45H54"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Полировка фар и удаление сколов</h3>
                     <ul class="service-list">
                         <li>Полировка фар Черкесск: убираем «катаракту», мутность и улучшаем внешний вид перед продажей</li>
-                        <li>Удаление сколов без покраски и ремонт сколов авто (локально, без полной перекраски детали)</li>
-                        <li>Покраска сколов авто КЧР при необходимости локального подкраса в цвет</li>
+                        <li>Удаление сколов без покраски и локальное замазывание сколов</li>
                     </ul>
                 </div>
                 <div class="service-category">
-                    <h3>Детейлинг авто и химчистка салона в Черкесске</h3>
-                    <ul class="service-list">
-                        <li>Химчистка салона Черкесск: глубокая очистка сидений, потолка, пола и багажника</li>
-                        <li>Детейлинг авто: прочистка системы вентиляции салона и химическая очистка воздуховодов</li>
-                        <li>Освежение салона и устранение скрипов пластика для аккуратной продажи автомобиля</li>
-                    </ul>
-                </div>
-                <div class="service-category">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 40L16 25C17 21 20 18 25 18H39C44 18 47 21 48 25L52 40V48H12V40Z"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 36H47M20 26H44"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                            <path d="M12 40H7V45H12M52 40H57V45H52"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <circle cx="20" cy="43" r="2" fill="currentColor"/>
+                            <circle cx="44" cy="43" r="2" fill="currentColor"/>
+                            <path d="M27 11L31 15L39 7"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>Предпродажная подготовка автомобиля в Черкесске</h3>
                     <ul class="service-list">
                         <li>Подготовка авто к продаже в Черкесске: подкапотная эстетика, штатная гофра, аккуратная проводка и клипсы</li>
@@ -557,40 +613,99 @@
                     </ul>
                 </div>
                 <div class="service-category">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M39 10C45 7 52 10 54 16L44 26L38 20L28 30L34 36L44 26L54 36L34 56L24 46L34 36"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24 46L14 56"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                            <path d="M10 12L20 22M20 12L10 22"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Мелкий ремонт перед продажей</h3>
                     <ul class="service-list">
                         <li>Протяжка креплений, устранение люфтов и мелких замечаний по кузову и салону</li>
                         <li>Локальная подварка (точечно, где это критично для осмотра и безопасной эксплуатации)</li>
-                        <li>Комплексная предпродажная подготовка автомобиля и подготовка авто к продаже за 1-2 дня</li>
                     </ul>
                 </div>
             </div>
 
             <!-- Блок с комплексной ценой (белый на чёрном) -->
             <div style="background: #000; color: #fff; padding: 50px 40px; margin: 30px 0; text-align: center; width: 100%;">
-                <div style="font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 20px; color: rgba(255,255,255,0.7);">комплекс от</div>
-                <div style="font-size: 4rem; font-weight: 700; line-height: 1; letter-spacing: -3px; margin-bottom: 25px;">10 000 <span style="font-size: 2rem; font-weight: 300; color: rgba(255,255,255,0.6);">₽</span></div>
-                <div style="font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.85);">
-                    Мойка кузова | Полировка оптики | Локальное устранение косяков<br>
-                    <span style="font-weight: 600; color: #fff; margin-top: 8px; display: inline-block;">уже включены в стоимость</span>
-                </div>
+                <div style="font-size: 4rem; font-weight: 700; line-height: 1; letter-spacing: -3px; margin-bottom: 25px;">Преимущества</div>
             </div>
 
             <!-- Блок «Почему мы?» — 4 причины, крупно -->
             <div class="benefits-grid">
                 <div class="benefit-card">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="23"
+                                    stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M32 16V32L44 39"
+                                  stroke="currentColor" stroke-width="3"
+                                  stroke-linecap="square" stroke-linejoin="round"/>
+                            <path d="M32 5V9M59 32H55"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div class="benefit-title">Экономия нервов<br>и времени</div>
-                    <div class="benefit-desc">Забудьте про логистику «мойка-полировка-электрик-химчистка». Весь комплекс работ выполняется в одном боксе за 1-2 дня с внимательным отношением к деталям.</div>
+                    <div class="benefit-desc">Забудьте про логистику «мойка-полировка-электрик-химчистка». Весь комплекс работ выполняется за 1-2 дня с внимательным отношением к деталям.</div>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-title">Оптовая стоимость<br>комплекса</div>
-                    <div class="benefit-desc">Отдельно химчистка салона стоит от 10 000 ₽. У нас комплекс начинается всего от 10 000 ₽ (Мойка + Полировка оптики + Локальное устранение косяков включены в стоимость).</div>
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 7L37 24L54 29L37 34L32 51L27 34L10 29L27 24L32 7Z"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <path d="M49 43L51 49L57 51L51 53L49 59L47 53L41 51L47 49L49 43Z"
+                                  stroke="currentColor" stroke-width="2"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="benefit-title">Эффект обслуженного <br>автомобиля</div>
+                    <div class="benefit-desc">Создаём ощущение, что за машиной ухаживали и обращались с ней бережно: ухоженный вид, отсутствие мелких недочётов — покупатель видит заботу в каждой детали и проникается доверием.</div>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 56V8"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="square"/>
+                            <path d="M13 11H49L40 22L49 33H13"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linejoin="round"/>
+                            <path d="M24 18L36 28M36 18L24 28"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div class="benefit-title">Убираем <br>«красные флаги»</div>
                     <div class="benefit-desc">Устраняем именно то, на что покупатель смотрит в первую очередь: мутные фары, сколы, сопли изоленты под капотом, скрипящий салон.</div>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 10H52V54H12V10Z"
+                                  stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M21 22H43M21 32H43M21 42H34"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="square"/>
+                            <path d="M39 42L43 46L51 37"
+                                  stroke="currentColor" stroke-width="2.5"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <div class="benefit-title">Фиксированная цена<br>и только необходимые работы</div>
                     <div class="benefit-desc">Цена не вырастет после первичного осмотра и дефектовки — никаких «ой, тут сложный случай». Платите ровно столько, сколько обговорили.</div>
                 </div>
